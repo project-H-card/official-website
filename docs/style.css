@@ -67,6 +67,7 @@ header nav ul {
     /* justify-content: space-between; */
     width: 80%;
     margin-left: 10%;
+    transition: all 0.5s;
 }
 
 header nav ul li {
@@ -85,6 +86,25 @@ header nav ul li a:hover {
     cursor: pointer;
     scale: 1.1;
     color: var(--main-color);
+}
+
+
+#hamburgerBtn {
+    display: none;
+    height: var(--header-height);
+    width: var(--header-height);
+}
+
+#hamburgerBtn:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+#hamburgerBtn span {
+    display: block;
+    height: 1px;
+    width: 60%;
+    background: var(--black);
 }
 
 
@@ -242,4 +262,52 @@ footer {
     color: var(--white);
     z-index: 5;
     width: 100%;
+}
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+    #logoBlock {
+        left: auto;
+        right: auto;
+        margin: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header nav ul {
+        transform: translateX(100vw);
+        display: block;
+        position: absolute;
+        background: var(--full-white);
+        width: 100vw;
+        margin: var(--header-height) 0;
+        height: calc(100vh - 64px);
+        text-align: center;
+        opacity: 0;
+    }
+
+    header nav ul.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    header nav ul li {
+        margin: 10px auto;
+        width: 80%;
+        border-top: 1px solid var(--black);
+        padding: 10px 0;
+    }
+
+    #hamburgerBtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
 }
