@@ -16,3 +16,8 @@ main {
     color: var(--white);
     background-color: var(--main-color);
 }
+
+#cardCanvas {
+    margin: auto;
+    display: block;
+}
