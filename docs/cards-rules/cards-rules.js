@@ -23,7 +23,9 @@ async function init() {
     camera.position.set(0, 0, 250);
 
     // ライト
-    const light = new THREE.AmbientLight( 0xffffff );
+    // const light = new THREE.AmbientLight( 0xffffff );
+    const light = new THREE.DirectionalLight(0xcccccc, 1);
+    light.position.set(0, 10, 5000);
     scene.add( light );
 
     // グループを作る

@@ -23,20 +23,28 @@ main {
     display: block;
 }
 
+.rules {
+    background: var(--white);
+}
 
 .ruleFirstBlock {
     text-align: center;
-    margin: 30px;
+    margin: 30px 0;
+    padding: 30px;
+    padding-bottom: 50px;
+    background: var(--main-color);
 }
 
 .ruleSteps {
     background: var(--white);
+    overflow: hidden;
 }
 
 .ruleStep {
     width: 60%;
     background: var(--main-color);
     padding: 30px;
+    margin: 5px 0;
 }
 
 .ruleStep h2 {
@@ -86,6 +94,6 @@ main {
     position: absolute;
     border-style: solid;
     border-color: var(--main-color) transparent transparent var(--main-color);
-    border-width: 100px 50px 100px 0px; 
+    border-width: 100px 80px 100px 0px; 
     left: 0;
 }
