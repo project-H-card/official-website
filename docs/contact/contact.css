@@ -1,3 +1,22 @@
+:root {
+    --full-white: #fff;
+    --white: #f5f5f5;
+    --main-color: #985D00;
+    --black: #111111;
+    --header-height: 64px;
+    --footer-height: 64px;
+}
+
+main {
+    background: var(--main-color);
+}
+
+#contactTitle {
+    display: block;
+    color: var(--white);
+    text-align: center;
+}
+
 .contactFormBlock {
     display: block;
     text-align: center;

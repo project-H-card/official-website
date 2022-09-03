@@ -84,7 +84,7 @@ main {
 .rightWord h2 {
     margin-right: 0;
     margin-left: auto;
-    transform: translateX(10px);
+    transform: translateX(30px);
     text-align: end;
     padding-right: 20px;
 }

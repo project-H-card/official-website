@@ -1,0 +1,55 @@
+main {
+    background: var(--main-color);
+}
+
+#aboutTitle {
+    display: block;
+    color: var(--white);
+    text-align: center;
+}
+
+.vision,.team {
+    background: var(--dark);
+    text-align: center;
+    padding: 20px;
+    color: var(--white);
+}
+
+.visionTeam {
+    height: 50px;
+    width: 200px;
+    background: var(--dark);
+    margin: auto;
+}
+
+.team {
+    padding: 30px;
+}
+
+.member {
+    display: block;
+    width: 80%;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.member h2 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.leftMember {
+    background: var(--white);
+    color: var(--black);
+}
+
+.rightMember {
+    background: var(--dark);
+    color: var(--white);
+    margin-right: 0;
+    margin-left: auto;
+}
+
+
+
+
