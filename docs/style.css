@@ -45,8 +45,30 @@ p {
 .scrollPopUp.blockIn {
     opacity: 1;
     transform: translateY(0);
+}
+
+.scrollLeftPop {
+    opacity: .1;
+    transform: translateX(-50px);
     transition: all 1.5s;
 }
+
+.scrollLeftPop.blockIn {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.scrollRightPop {
+    opacity: .1;
+    transform: translateX(50px);
+    transition: all 1.5s;
+}
+
+.scrollRightPop.blockIn {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
 
 
 

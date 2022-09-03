@@ -2,6 +2,7 @@
     --full-white: #fff;
     --white: #f5f5f5;
     --main-color: #985D00;
+    --dark: #783D00;
     --black: #111111;
     --header-height: 64px;
     --footer-height: 64px;
@@ -20,4 +21,71 @@ main {
 #cardCanvas {
     margin: auto;
     display: block;
+}
+
+
+.ruleFirstBlock {
+    text-align: center;
+    margin: 30px;
+}
+
+.ruleSteps {
+    background: var(--white);
+}
+
+.ruleStep {
+    width: 60%;
+    background: var(--main-color);
+    padding: 30px;
+}
+
+.ruleStep h2 {
+    display: block;
+    background: var(--dark);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 30px;
+    position: relative;
+    height: 70px;
+    line-height: 70px;
+}
+
+.ruleStep p {
+    display: block;
+}
+
+.rightWord {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.leftWord h2 {
+    transform: translateX(-30px);
+    padding-left: 20px;
+}
+
+.leftWord h2::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: var(--main-color) var(--main-color) transparent transparent;
+    border-width: 0px 80px 100px 0;  
+    right: 0;
+}
+
+.rightWord h2 {
+    margin-right: 0;
+    margin-left: auto;
+    transform: translateX(10px);
+    text-align: end;
+    padding-right: 20px;
+}
+
+.rightWord h2::before {
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-color: var(--main-color) transparent transparent var(--main-color);
+    border-width: 100px 50px 100px 0px; 
+    left: 0;
 }

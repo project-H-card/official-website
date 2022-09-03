@@ -1,7 +1,5 @@
 window.addEventListener('DOMContentLoaded', init);
 
-const cardNum = 10;
-
 
 // 10枚のカードの画像が円形に回る
 async function init() {
@@ -34,11 +32,14 @@ async function init() {
     scene.add(group);
 
 
+    const imageNames = ["足利尊氏.png", "card_ジェンキンス.png", "card_シオン.png", "card_シュン.png", "card_ハマボウ.png"];
+    const cardNum = imageNames.length;
+
     for(let i = 0; i < cardNum; i++){
-        const texture = await new THREE.TextureLoader().load('../images/足利尊氏.png')
+        const texture = await new THREE.TextureLoader().load(`../images/${imageNames[i]}`)
         // 縦横比を保って適当にリサイズ
-        const w = 50;
         const h = 100;
+        const w = Math.round(h * 743 / 1038);
         // console.log(texture);
 
         // 平面

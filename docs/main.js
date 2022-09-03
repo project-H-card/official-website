@@ -6,7 +6,7 @@ hamburgerBtn.addEventListener("click", (e) => {
 
 
 
-let popUpTargets = document.querySelectorAll('.scrollPopUp');
+let popUpTargets = document.querySelectorAll('.scrollPopUp,.scrollLeftPop,.scrollRightPop');
 
 window.addEventListener('scroll', function () {
   var scroll = window.scrollY; //スクロール量を取得
