@@ -6,6 +6,7 @@ main {
     display: block;
     color: var(--white);
     text-align: center;
+    margin: 30px;
 }
 
 .vision,.team {
@@ -16,7 +17,7 @@ main {
 }
 
 .visionTeam {
-    height: 50px;
+    height: 100px;
     width: 200px;
     background: var(--dark);
     margin: auto;

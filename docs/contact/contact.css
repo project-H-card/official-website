@@ -30,4 +30,5 @@ main {
     margin-right: auto;
     background: rgba(240,240,240,0.6);
     border-radius: 10px;
+    max-width: 100%;
 }
