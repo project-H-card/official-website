@@ -304,6 +304,11 @@ main {
     margin: 30px;
 }
 
+.FAQBlock p {
+    display: block;
+    margin: 30px;
+}
+
 .centerBuyBlock {
     width: 300px;
     text-align: center;

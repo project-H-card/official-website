@@ -1,31 +1,65 @@
 main {
-    background: var(--main-color);
+    background: var(--white);
 }
 
-#aboutTitle {
+.aboutTitle {
     display: block;
-    color: var(--white);
+    color: var(--dark);
     text-align: center;
     margin: 30px;
+    margin-top: 80px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 50%);
+    letter-spacing: 2px;
 }
 
-.vision,.team {
-    background: var(--dark);
+.visionImage {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.vision{
+    /* background: var(--dark); */
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
-    padding: 20px;
+    /* padding: 20px; */
     color: var(--white);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 50%);
+    letter-spacing: 2px;
+    position: relative;
 }
 
-.visionTeam {
-    height: 100px;
-    width: 200px;
-    background: var(--dark);
-    margin: auto;
+.visionText {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px black;
 }
 
 .team {
+    text-align: center;
     padding: 30px;
+    color: var(--dark);
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgb(0 0 0 / 50%);
+    letter-spacing: 2px;
 }
+
+.aboutTitle h2 {
+    font-size: 48px;
+}
+
+.team h2 {
+    font-size: 48px;
+}
+
+/* .members {
+    background: var(--main-color);
+} */
 
 .member {
     display: block;
@@ -40,7 +74,7 @@ main {
 }
 
 .leftMember {
-    background: var(--white);
+    background: #f4e7e1;
     color: var(--black);
 }
 
@@ -52,5 +86,21 @@ main {
 }
 
 
+@media screen and (max-width:700px) {
+    .visionText h2{
+        font-size: 24px;
+    }
+    .visionText h1{
+        font-size: 48px;
+    }
+}
 
+@media screen and (max-width:500px) {
+    .visionText h2{
+        font-size: 18px;
+    }
+    .visionText h1{
+        font-size: 32px;
+    }
+}
 

@@ -32,3 +32,48 @@ main {
     border-radius: 10px;
     max-width: 100%;
 }
+
+/* .contactButton {
+    display: block;
+    margin: auto;
+    background: white;
+    color: purple;
+    border: 3px solid purple;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.contactButton:hover {
+    color: white;
+}
+
+.contactButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.contactButton:hover::after {
+    -webkit-transform: scale(2) rotate(180deg);
+    -ms-transform: scale(2) rotate(180deg);
+    transform: scale(2) rotate(180deg);
+    background: purple;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: -1;
+} */
