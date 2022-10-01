@@ -8,12 +8,12 @@
 }
 
 main {
-    background: var(--main-color);
+    background: var(--white);
 }
 
 #contactTitle {
     display: block;
-    color: var(--white);
+    color: var(--main-color);
     text-align: center;
 }
 
@@ -21,17 +21,50 @@ main {
     display: block;
     text-align: center;
     margin-top: 50px;
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
 }
 
 #contactForm {
     margin-left: auto;
     margin-right: auto;
-    background: rgba(240,240,240,0.6);
+    background: rgba(200,200,200,0.6);
     border-radius: 10px;
     max-width: 100%;
 }
+
+.sns {
+    margin-top: 30px;
+}
+
+.sns h2 {
+    text-align: center;
+    font-size: 64px;
+    color: var(--main-color);
+}
+
+.sns a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    background: var(--white);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+}
+
+.sns a:hover {
+    scale: 1.1;
+    /* transform: translateY(-10px); */
+    background: var(--full-white);
+}
+
+.sns a img {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+} 
 
 /* .contactButton {
     display: block;

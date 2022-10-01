@@ -38,7 +38,7 @@ async function init() {
     const cardNum = imageNames.length;
 
     for(let i = 0; i < cardNum; i++){
-        const texture = await new THREE.TextureLoader().load(`../images/${imageNames[i]}`)
+        const texture = await new THREE.TextureLoader().load(`../images/cards/${imageNames[i]}`)
         // 縦横比を保って適当にリサイズ
         const h = 100;
         const w = Math.round(h * 743 / 1038);
