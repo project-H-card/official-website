@@ -1,0 +1,112 @@
+:root {
+    --full-white: #fff;
+    --white: #f5f5f5;
+    --main-color: #985D00;
+    --black: #111111;
+    --header-height: 64px;
+    --footer-height: 64px;
+}
+
+main {
+    background: var(--white);
+}
+
+#contactTitle {
+    display: block;
+    color: var(--main-color);
+    text-align: center;
+}
+
+.contactFormBlock {
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+    /* position: absolute; */
+    width: 100%;
+}
+
+#contactForm {
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(200,200,200,0.6);
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.sns {
+    margin-top: 30px;
+}
+
+.sns h2 {
+    text-align: center;
+    font-size: 64px;
+    color: var(--main-color);
+}
+
+.sns a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    background: var(--white);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+}
+
+.sns a:hover {
+    scale: 1.1;
+    /* transform: translateY(-10px); */
+    background: var(--full-white);
+}
+
+.sns a img {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+} 
+
+/* .contactButton {
+    display: block;
+    margin: auto;
+    background: white;
+    color: purple;
+    border: 3px solid purple;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    text-align: center;
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.contactButton:hover {
+    color: white;
+}
+
+.contactButton::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+.contactButton:hover::after {
+    -webkit-transform: scale(2) rotate(180deg);
+    -ms-transform: scale(2) rotate(180deg);
+    transform: scale(2) rotate(180deg);
+    background: purple;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: -1;
+} */

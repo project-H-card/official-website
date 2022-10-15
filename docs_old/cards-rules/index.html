@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>Hi!story</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./cards-rules.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../" id="logoBlock">
+                <img src="../images/History_logo_circle.jpeg" alt="ロゴ" id="headerLogo">
+            </a>
+            <ul>
+                <li><a href="../"><span>HOME</span></a></li>
+                <li><a href="../about/"><span>私たちについて</span></a></li>
+                <li><a href="../cards-rules/"><span>カード & ルール</span></a></li>
+                <li><a href="../contact/"><span>お問い合わせ</span></a></li>
+            </ul>
+            <div id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="cardMainFirst">
+            <h1>カード</h1>
+        </div>
+
+        <div class="topVideoBlock">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bjmBJ1Fl0cs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <canvas id="cardCanvas"></canvas>
+        <div class="rules">
+            <div class="ruleFirstBlock">
+                <h1>ルール</h1>
+                <h2>簡単に言うと<br>こういうルールです</h2>
+            </div>
+            <div class="ruleSteps">
+                <div class="ruleStep leftWord scrollLeftPop" id="ruleStep1">
+                    <h2>Step1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi excepturi accusantium cumque, sed blanditiis aut repellendus eaque ullam voluptas quidem quisquam dolor id, possimus reprehenderit pariatur explicabo dignissimos aliquid.</p>
+                </div>
+                <div class="ruleStep rightWord scrollRightPop" id="ruleStep2">
+                    <h2>Step2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi excepturi accusantium cumque, sed blanditiis aut repellendus eaque ullam voluptas quidem quisquam dolor id, possimus reprehenderit pariatur explicabo dignissimos aliquid.</p>
+                </div>
+                <div class="ruleStep leftWord scrollLeftPop" id="ruleStep3">
+                    <h2>Step3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi excepturi accusantium cumque, sed blanditiis aut repellendus eaque ullam voluptas quidem quisquam dolor id, possimus reprehenderit pariatur explicabo dignissimos aliquid.</p>
+                </div>
+                <div class="ruleStep rightWord scrollRightPop" id="ruleStep4">
+                    <h2>Step4</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi excepturi accusantium cumque, sed blanditiis aut repellendus eaque ullam voluptas quidem quisquam dolor id, possimus reprehenderit pariatur explicabo dignissimos aliquid.</p>
+                </div>
+                <div class="ruleStep leftWord scrollLeftPop" id="ruleStep5">
+                    <h2>Step5</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi excepturi accusantium cumque, sed blanditiis aut repellendus eaque ullam voluptas quidem quisquam dolor id, possimus reprehenderit pariatur explicabo dignissimos aliquid.</p>
+                </div>
+                <div class="ruleStep rightWord scrollRightPop" id="ruleStep6">
+                    <h2>Step6</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque quasi excepturi accusantium cumque, sed blanditiis aut repellendus eaque ullam voluptas quidem quisquam dolor id, possimus reprehenderit pariatur explicabo dignissimos aliquid.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        ここにフッター
+    </footer>
+    <script src="https://unpkg.com/three@0.140.2/build/three.min.js"></script>
+    <script src="../main.js"></script>
+    <script src="./cards-rules.js"></script>
+</body>
+</html>

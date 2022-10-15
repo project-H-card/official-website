@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: "M PLUS Rounded 1c";
+}
+
+:root {
+    --full-white: #fff;
+    --white: #f5f5f5;
+    --main-color: #985D00;
+    --black: #111111;
+    --dark: #783D00;
+    --header-height: 64px;
+    --footer-height: 64px;
+}
+
+body {
+    /* height: 1000px; */
+    background: url(images/all_background_dark.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: var(--black);
+}
+
+body::before {
+    content: "";
+    background: rgba(1, 1, 1, 0.3);
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.scrollPopUp {
+    opacity: .1;
+    transform: translateY(100px);
+    transition: all 1.5s;
+}
+
+.scrollPopUp.blockIn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scrollLeftPop {
+    opacity: .1;
+    transform: translateX(-50px);
+    transition: all 1.5s;
+}
+
+.scrollLeftPop.blockIn {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.scrollRightPop {
+    opacity: .1;
+    transform: translateX(50px);
+    transition: all 1.5s;
+}
+
+.scrollRightPop.blockIn {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+
+
+
+/* ここから Header */
+header {
+    height: var(--header-height);
+    width: 100%;
+    background: var(--full-white);
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    box-shadow: 0px 2px 24px 2px rgba(1, 1, 1, 0.3);
+}
+
+header nav {
+    display: flex;
+}
+
+#logoBlock {
+    margin-left: 10px;
+}
+
+#headerLogo {
+    height: var(--header-height);
+    display: block;
+}
+
+header nav ul {
+    display: flex;
+    /* justify-content: space-between; */
+    width: 80%;
+    margin-left: 10%;
+    transition: all 0.5s;
+}
+
+header nav ul li {
+    width: 25%;
+    text-align: center;
+    line-height: var(--header-height);
+}
+
+header nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+header nav ul li a:hover {
+    cursor: pointer;
+    scale: 1.1;
+    color: var(--main-color);
+}
+
+header nav ul li a::after {
+    content: "";
+    background: linear-gradient(to right, rgba(200, 70, 200, 1), rgba(256, 100, 256, 0));
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    opacity: 0.2;
+    transition: all 0.3s;
+    margin-left: 10%;
+    
+}
+
+header nav ul li a:hover::after {
+    content: "";
+    left: 0;
+    opacity: 0.2;
+}
+
+
+#hamburgerBtn {
+    display: none;
+    height: var(--header-height);
+    width: var(--header-height);
+}
+
+#hamburgerBtn:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+#hamburgerBtn span {
+    display: block;
+    height: 1px;
+    width: 60%;
+    background: var(--black);
+}
+
+
+
+/* ここから main */
+main {
+    margin-top: var(--header-height);
+    min-height: 2000px;
+    width: 100%;
+    color: var(--black);
+}
+
+
+#mainFirst {
+    position: relative;
+    text-align: center;
+}
+
+#topImage {
+    width: 100%;
+    display: block;
+}
+
+.topWords {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 300px;
+}
+
+.mainButton {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    width: 80%;
+    margin-left: 10%;
+    background: #e90;
+    border-radius: 25px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.mainButton:hover {
+    background: #fb2;
+    cursor: pointer;
+}
+
+
+.topVideoBlock {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.topVideoBlock iframe {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    height: 80%;
+}
+
+.storyBlock {
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+#storyImage {
+    width: 100%;
+    display: block;
+    height: 1000px;
+}
+
+.storyBlock h2 {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+}
+.storyBlock p {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+}
+
+
+.whyBlock, .FAQBlock {
+    background: var(--main-color);
+    color: var(--white);
+    padding: 30px;
+    min-height: 700px;
+    margin: 50px 0;
+}
+
+.whyBlock h2 {
+    margin: 30px;
+}
+
+.whyBlock p {
+    display: block;
+    margin: 50px;
+    font-size: 24px;
+    max-width: 60%;
+}
+
+.whyBlock p.left10 {
+    margin-left: 10%;
+}
+.whyBlock p.left20 {
+    margin-left: 20%;
+}
+.whyBlock p.left30 {
+    margin-left: 30%;
+}
+.whyBlock p.left40 {
+    margin-left: 40%;
+}
+.whyBlock p.left50 {
+    margin-left: 50%;
+}
+.whyBlock p.left60 {
+    margin-left: 60%;
+}
+.whyBlock p.left70 {
+    margin-left: 70%;
+}
+.whyBlock p.left80 {
+    margin-left: 80%;
+}
+
+.FAQBlock h2 {
+    margin: 30px;
+}
+
+.FAQBlock p {
+    display: block;
+    margin: 30px;
+}
+
+.centerBuyBlock {
+    width: 300px;
+    text-align: center;
+    margin: 50px auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+.twitter-iframes {
+    width: 400px;
+    max-width: 100%;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: scroll;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+.note-iframes {
+    width: 400px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+
+
+
+/* ここからfooter */
+footer {
+    background: var(--main-color);
+    height: var(--footer-height);
+    color: var(--white);
+    z-index: 5;
+    width: 100%;
+}
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+    #logoBlock {
+        left: auto;
+        right: auto;
+        margin: auto;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    header nav ul {
+        transform: translateX(100vw);
+        display: block;
+        position: absolute;
+        background: var(--full-white);
+        width: 100vw;
+        margin: var(--header-height) 0;
+        height: calc(100vh - 64px);
+        text-align: center;
+        opacity: 0;
+    }
+
+    header nav ul.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    header nav ul li {
+        margin: 10px auto;
+        width: 80%;
+        border-top: 1px solid var(--black);
+        padding: 10px 0;
+    }
+
+    #hamburgerBtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        box-sizing: border-box;
+    }
+}
