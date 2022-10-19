@@ -205,7 +205,7 @@ main {
     width: 300px;
 }
 
-.purchase {
+.purchase, .goToCards {
     /* background: linear-gradient(to right, #007e69, #000081); */
     height: 120px;
     width: 100%;
@@ -232,6 +232,7 @@ main {
     font-size: 16px;
     /* border: var(--white) 1px solid; */
     box-shadow: rgb(200 200 200 / 40%) 5px 5px 5px;
+    overflow: hidden;
 }
 
 .purchase a span {
@@ -252,6 +253,29 @@ main {
 
 .purchase a:hover::before {
     opacity: 0;
+}
+
+
+
+/*キラッと光る*/
+.shiningBtn::after {
+    content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
+    position: absolute;
+    top: 0;
+    left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+    animation: shine 1.5s infinite;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }
 
 
@@ -395,14 +419,65 @@ main {
 }
 
 
+#cardRotation::before {
+    content: "Cards";
+    right: 70px;
+}
 
-.FAQBlock h2 {
+.comingSoon {
+    font-size: 128px;
+    text-align: center;
+    display: block;
     margin: 30px;
 }
 
-.FAQBlock p {
+.goToCardsButton {
+    position: relative;
+    height: 60px;
     display: block;
-    margin: 30px;
+    width: fit-content;
+    padding: 0 50px;
+    background: linear-gradient(to right, rgb(168, 5, 168), rgb(206, 141, 152));
+    border-radius: 30px;
+    line-height: 60px;
+    margin: auto;
+    top: 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    /* border: var(--white) 1px solid; */
+    box-shadow: rgb(200 200 200 / 40%) 5px 5px 5px;
+    overflow: hidden;
+}
+
+.goToCardsButton span {
+    position: relative;
+}
+
+.goToCardsButton::before {
+    background: linear-gradient(to left, rgb(168, 5, 168), rgb(206, 141, 152));
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s linear;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.goToCardsButton:hover::before {
+    opacity: 0;
+}
+
+#rules::before {
+    content: "Rules";
+}
+
+
+#FAQs::before {
+    content: "Q&A";
+    right: 70px;
 }
 
 .centerBuyBlock {
@@ -413,7 +488,10 @@ main {
 
 
 
-
+#SNS::before {
+    content: "SNS";
+    right: 70px;
+}
 
 
 
@@ -425,8 +503,7 @@ main {
     width: 400px;
     max-width: 100%;
     height: 400px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
     overflow: scroll;
     border-radius: 5px;
     text-align: center;
@@ -436,8 +513,7 @@ main {
 .note-iframes {
     width: 400px;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 30px auto;
     border-radius: 5px;
     text-align: center;
 }
@@ -513,5 +589,9 @@ footer {
 
     .section2_1 h1 {
         font-size: 24px;
+    }
+
+    .blackSection::before {
+        font-size: 64px;
     }
 }
