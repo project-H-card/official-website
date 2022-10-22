@@ -40,7 +40,9 @@ window.addEventListener('DOMContentLoaded', init);
 async function init() {
 
     // サイズを指定
-    const width = window.innerWidth;
+    const displaySize = window.innerWidth;
+    let width = 900;
+    if(displaySize < 1000) width = displaySize - 100;
     const height = 540;
 
     // レンダラーを作成
