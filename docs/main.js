@@ -9,12 +9,24 @@ hamburgerBtn.addEventListener("click", (e) => {
 let popUpTargets = document.querySelectorAll('.scrollPopUp,.scrollLeftPop,.scrollRightPop');
 
 window.addEventListener('scroll', function () {
-  var scroll = window.scrollY; //スクロール量を取得
-  var windowHeight = window.innerHeight; //画面の高さを取得
-  for (let target of popUpTargets) { //ターゲット要素がある分、アニメーション用のクラスをつける処理を繰り返す
-    var targetPos = target.getBoundingClientRect().top + scroll; //ターゲット要素の位置を取得
-    if (scroll > targetPos - windowHeight) { //スクロール量 > ターゲット要素の位置
-      target.classList.add('blockIn');
+    var scroll = window.scrollY; //スクロール量を取得
+    var windowHeight = window.innerHeight; //画面の高さを取得
+    for (let target of popUpTargets) { //ターゲット要素がある分、アニメーション用のクラスをつける処理を繰り返す
+        var targetPos = target.getBoundingClientRect().top + scroll; //ターゲット要素の位置を取得
+        if (scroll > targetPos - windowHeight) { //スクロール量 > ターゲット要素の位置
+            target.classList.add('blockIn');
+        }
     }
-  }
 });
+
+
+const QTexts = document.querySelectorAll(".QText");
+console.log(QTexts);
+console.log(QTexts[0]);
+
+QTexts.forEach(QText => {
+    QText.addEventListener("click", (e) => {
+        e.target.classList.toggle("openA");
+        e.target.nextElementSibling.classList.toggle("openA");
+    })
+})
