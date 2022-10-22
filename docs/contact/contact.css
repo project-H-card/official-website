@@ -8,19 +8,20 @@
 }
 
 main {
-    background: var(--white);
+    /* background: var(--white); */
+    min-height: 1000px;
 }
 
 #contactTitle {
     display: block;
-    color: var(--main-color);
+    color: var(--white);
     text-align: center;
 }
 
 .contactFormBlock {
     display: block;
     text-align: center;
-    margin-top: 50px;
+    margin: 50px 0;
     /* position: absolute; */
     width: 100%;
 }
@@ -28,12 +29,12 @@ main {
 #contactForm {
     margin-left: auto;
     margin-right: auto;
-    background: rgba(200,200,200,0.6);
+    background: rgba(100,100,100,0.6);
     border-radius: 10px;
     max-width: 100%;
 }
 
-.sns {
+/* .sns {
     margin-top: 30px;
 }
 
@@ -56,7 +57,7 @@ main {
 
 .sns a:hover {
     scale: 1.1;
-    /* transform: translateY(-10px); */
+    transform: translateY(-10px);
     background: var(--full-white);
 }
 
@@ -64,49 +65,5 @@ main {
     width: 80%;
     height: 80%;
     margin: auto;
-} 
+}  */
 
-/* .contactButton {
-    display: block;
-    margin: auto;
-    background: white;
-    color: purple;
-    border: 3px solid purple;
-    padding: 10px;
-    position: relative;
-    overflow: hidden;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-    text-align: center;
-    width: fit-content;
-    text-decoration: none;
-    border-radius: 3px;
-}
-
-.contactButton:hover {
-    color: white;
-}
-
-.contactButton::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-}
-
-.contactButton:hover::after {
-    -webkit-transform: scale(2) rotate(180deg);
-    -ms-transform: scale(2) rotate(180deg);
-    transform: scale(2) rotate(180deg);
-    background: purple;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    z-index: -1;
-} */
