@@ -21,8 +21,6 @@ window.addEventListener('scroll', function () {
 
 
 const QTexts = document.querySelectorAll(".QText");
-console.log(QTexts);
-console.log(QTexts[0]);
 
 QTexts.forEach(QText => {
     QText.addEventListener("click", (e) => {

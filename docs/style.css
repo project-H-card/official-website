@@ -13,7 +13,7 @@
     --full-black: #000;
     --dark: #783D00;
     --header-height: 64px;
-    --footer-height: 64px;
+    --footer-height: 128px;
 }
 
 body {
@@ -618,11 +618,64 @@ main {
 
 /* ここからfooter */
 footer {
-    background: var(--main-color);
-    height: var(--footer-height);
+    background: var(--black);
+    /* height: var(--footer-height); */
     color: var(--white);
     z-index: 5;
     width: 100%;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.footerBlock {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.footerBlock nav {
+    display: block;
+}
+
+.footerBlock nav ul {
+    display: flex;
+}
+
+.footerBlock nav ul li {
+    margin: 20px;
+}
+
+.footerBlock nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.footerBlock nav ul li a:hover {
+    color: #adf;
+}
+
+.snsIcons a {
+    width: 50px;
+    color: transparent;
+}
+
+.snsIcons a img {
+    width: 50px;
+}
+
+.footerNote img {
+    scale: 1.5;
+}
+
+footer small {
+    text-align: center;
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 5px;
 }
 
 
@@ -687,5 +740,9 @@ footer {
 
     .blackSection::before {
         font-size: 64px;
+    }
+
+    .footerBlock nav ul {
+        display: block;
     }
 }
