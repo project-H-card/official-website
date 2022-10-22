@@ -48,9 +48,11 @@ async function init() {
 
     let cameraDistance = 250;
 
-    if(displaySize < 700) cameraDistance = 500;
-    width = displaySize;
-    canvas.style.transform = "translateX(-50px)";
+    if(displaySize < 700) {
+        cameraDistance = 500;
+        width = displaySize;
+        canvas.style.transform = "translateX(-50px)"
+    };
 
 
     // レンダラーを作成
