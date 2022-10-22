@@ -1,80 +1,80 @@
-window.addEventListener('DOMContentLoaded', init);
+// window.addEventListener('DOMContentLoaded', init);
 
 
-// 10枚のカードの画像が円形に回る
-async function init() {
+// // 10枚のカードの画像が円形に回る
+// async function init() {
 
-    // サイズを指定
-    const width = window.innerWidth;
-    const height = 540;
+//     // サイズを指定
+//     const width = window.innerWidth;
+//     const height = 540;
 
-    // レンダラーを作成
-    const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#cardCanvas')
-    });
-    renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(width, height);
+//     // レンダラーを作成
+//     const renderer = new THREE.WebGLRenderer({
+//     canvas: document.querySelector('#cardCanvas')
+//     });
+//     renderer.setPixelRatio(window.devicePixelRatio);
+//     renderer.setSize(width, height);
 
-    // シーンを作成
-    const scene = new THREE.Scene();
+//     // シーンを作成
+//     const scene = new THREE.Scene();
 
-    // カメラを作成
-    const camera = new THREE.PerspectiveCamera(45, width / height);
-    camera.position.set(0, 0, 250);
+//     // カメラを作成
+//     const camera = new THREE.PerspectiveCamera(45, width / height);
+//     camera.position.set(0, 0, 250);
 
-    // ライト
-    // const light = new THREE.AmbientLight( 0xffffff );
-    const light = new THREE.DirectionalLight(0xcccccc, 1);
-    light.position.set(0, 10, 5000);
-    scene.add( light );
+//     // ライト
+//     // const light = new THREE.AmbientLight( 0xffffff );
+//     const light = new THREE.DirectionalLight(0xcccccc, 1);
+//     light.position.set(0, 10, 5000);
+//     scene.add( light );
 
-    // グループを作る
-    const group = new THREE.Group();
-    // 3D空間にグループを追加する
-    scene.add(group);
-
-
-    const imageNames = ["足利尊氏.png", "card_ジェンキンス.png", "card_シオン.png", "card_シュン.png", "card_ハマボウ.png"];
-    const cardNum = imageNames.length;
-
-    for(let i = 0; i < cardNum; i++){
-        const texture = await new THREE.TextureLoader().load(`../images/cards/${imageNames[i]}`)
-        // 縦横比を保って適当にリサイズ
-        const h = 100;
-        const w = Math.round(h * 743 / 1038);
-        // console.log(texture);
-
-        // 平面
-        const geometry = new THREE.PlaneGeometry(1, 1);
-        const material = new THREE.MeshPhongMaterial( { map:texture } );
-        const plane = new THREE.Mesh( geometry, material );
-        plane.scale.set(w, h, 1);
-
-        // 配置座標を計算
-        const radian = i / cardNum * Math.PI * 2;
-        plane.position.set(
-            100 * Math.cos(radian), // X座標
-            10, // Y座標
-            100 * Math.sin(radian) // Z座標
-        );
-
-        group.add(plane);
-    }
+//     // グループを作る
+//     const group = new THREE.Group();
+//     // 3D空間にグループを追加する
+//     scene.add(group);
 
 
-    tick();
+//     const imageNames = ["足利尊氏.png", "card_ジェンキンス.png", "card_シオン.png", "card_シュン.png", "card_ハマボウ.png"];
+//     const cardNum = imageNames.length;
 
-    // 毎フレーム時に実行されるループイベントです
-    function tick() {
-        group.rotation.y += 0.005;
-        group.children.forEach(elem => elem.rotation.y -= 0.005);
+//     for(let i = 0; i < cardNum; i++){
+//         const texture = await new THREE.TextureLoader().load(`../images/cards/${imageNames[i]}`)
+//         // 縦横比を保って適当にリサイズ
+//         const h = 100;
+//         const w = Math.round(h * 743 / 1038);
+//         // console.log(texture);
 
-        // レンダリング
-        renderer.render(scene, camera);
-        requestAnimationFrame(tick);
-    }
+//         // 平面
+//         const geometry = new THREE.PlaneGeometry(1, 1);
+//         const material = new THREE.MeshPhongMaterial( { map:texture } );
+//         const plane = new THREE.Mesh( geometry, material );
+//         plane.scale.set(w, h, 1);
 
-}
+//         // 配置座標を計算
+//         const radian = i / cardNum * Math.PI * 2;
+//         plane.position.set(
+//             100 * Math.cos(radian), // X座標
+//             10, // Y座標
+//             100 * Math.sin(radian) // Z座標
+//         );
+
+//         group.add(plane);
+//     }
+
+
+//     tick();
+
+//     // 毎フレーム時に実行されるループイベントです
+//     function tick() {
+//         group.rotation.y += 0.005;
+//         group.children.forEach(elem => elem.rotation.y -= 0.005);
+
+//         // レンダリング
+//         renderer.render(scene, camera);
+//         requestAnimationFrame(tick);
+//     }
+
+// }
 
 
 

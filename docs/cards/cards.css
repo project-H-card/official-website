@@ -13,9 +13,13 @@
     text-align: center;
 }
 
+#cardMainFirst h2 {
+    font-size: 128px;
+}
+
 main {
     color: var(--white);
-    background-color: var(--main-color);
+    /* background-color: var(--main-color); */
 }
 
 #cardCanvas {

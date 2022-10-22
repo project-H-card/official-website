@@ -180,7 +180,7 @@ header nav ul li a:hover::after {
 /* ここから main */
 main {
     margin-top: var(--header-height);
-    min-height: 2000px;
+    min-height: 1000px;
     width: 100%;
     color: var(--black);
 }
