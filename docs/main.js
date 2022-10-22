@@ -34,6 +34,7 @@ QTexts.forEach(QText => {
 
 // カードが回るやつ
 window.addEventListener('DOMContentLoaded', init);
+const canvas = document.querySelector('#cardCanvas');
 
 
 // 10枚のカードの画像が円形に回る
@@ -45,9 +46,16 @@ async function init() {
     if(displaySize < 1000) width = displaySize - 100;
     const height = 540;
 
+    let cameraDistance = 250;
+
+    if(displaySize < 700) cameraDistance = 500;
+    width = displaySize;
+    canvas.style.transform = "translateX(-50px)";
+
+
     // レンダラーを作成
     const renderer = new THREE.WebGLRenderer({
-    canvas: document.querySelector('#cardCanvas')
+    canvas
     });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(width, height);
@@ -57,7 +65,7 @@ async function init() {
 
     // カメラを作成
     const camera = new THREE.PerspectiveCamera(45, width / height);
-    camera.position.set(0, 0, 250);
+    camera.position.set(0, 0, cameraDistance);
 
     // ライト
     // const light = new THREE.AmbientLight( 0xffffff );
