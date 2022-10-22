@@ -22,7 +22,7 @@ main {
     /* background-color: var(--main-color); */
 }
 
-#cardCanvas {
+/* #cardCanvas {
     margin: auto;
     display: block;
 }
@@ -100,4 +100,12 @@ main {
     border-color: var(--main-color) transparent transparent var(--main-color);
     border-width: 100px 80px 100px 0px; 
     left: 0;
+} */
+
+
+
+@media screen and (max-width:700px) {
+    #cardMainFirst h2 {
+        font-size: 64px;
+    }
 }

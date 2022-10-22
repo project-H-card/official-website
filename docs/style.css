@@ -456,6 +456,11 @@ main {
     right: 70px;
 }
 
+#cardCanvas {
+    margin: auto;
+    display: block;
+}
+
 .comingSoon {
     font-size: 64px;
     text-align: center;
