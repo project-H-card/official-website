@@ -46,6 +46,10 @@ p {
     font-size: 16px;
 }
 
+.only_sp {
+    display: none;
+}
+
 .scrollPopUp {
     opacity: .1;
     transform: translateY(100px);
@@ -330,6 +334,9 @@ main {
     position: absolute;
     color: rgba(250,250,250,0.2);
     top: 30px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 
@@ -534,7 +541,7 @@ main {
     display: block;
     border: 2px solid var(--white);
     padding: 10px 30px;
-    font-size: 24px;
+    font-size: 16px;
     position: relative;
 }
 
@@ -689,6 +696,10 @@ footer small {
 
 
 @media screen and (max-width:700px) {
+    .only_sp {
+        display: inline;
+    }
+
     #logoBlock {
         left: auto;
         right: auto;
@@ -743,11 +754,42 @@ footer small {
         font-size: 24px;
     }
 
+    .blackSection > h2 {
+        font-size: 24px;
+    }
+
+    #story h2 {
+        font-size: 24px;
+    }
+
+    .storyTexts h2 {
+        margin: 30px;
+    }
+
+    .storyTexts p {
+        margin: 30px;
+    }
+
     .blackSection::before {
         font-size: 64px;
     }
 
+    .QText {
+        padding-right: 40px;
+    }
+
     .footerBlock nav ul {
         display: block;
+    }
+
+}
+
+
+
+/* PC版のみの設定 */
+@media screen and (min-width:699px) {
+    .whyHistoryLeft {
+        display: block; 
+        margin-left: 50px;
     }
 }
