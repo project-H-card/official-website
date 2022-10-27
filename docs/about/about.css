@@ -1,6 +1,22 @@
-main {
+/* main {
     background: var(--white);
+} */
+
+
+
+#aboutMainFirst {
+    text-align: center;
 }
+
+#aboutMainFirst h2 {
+    font-size: 128px;
+}
+
+main {
+    color: var(--white);
+}
+
+
 
 .aboutTitle {
     display: block;

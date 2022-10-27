@@ -1,0 +1,13 @@
+#purchaseMainFirst {
+    text-align: center;
+}
+
+#purchaseMainFirst h2 {
+    font-size: 128px;
+}
+
+main {
+    color: var(--white);
+}
+
+
