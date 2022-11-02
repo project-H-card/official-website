@@ -200,7 +200,10 @@ main {
     z-index: 1000000;
     background: #000;
 	text-align:center;
-	line-height:100vh;
+	/* line-height:100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 	font-weight:bold;
 	color: #FFF;
 	text-shadow: 
@@ -214,17 +217,14 @@ main {
 }
 
 @keyframes fadeout {
-    0%, 10% {
+    0%, 10%, 20%, 30% {
         opacity: 1.0;
     }
-    20%, 30% {
-        opacity: 0.9;
-    }
     40% {
-        opacity: 0.7;
+        opacity: 0.8;
     }
     50% {
-        opacity: 0.5;
+        opacity: 0.6;
     }
     60% {
         opacity: 0.4;
@@ -241,6 +241,32 @@ main {
     100% {
         opacity: 0;
     }
+}
+
+#firstView h2 {
+    display: block;
+    width: 40vw;
+    max-width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    font-size: 5vw;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1s steps(8), blink .3s steps(1) infinite alternate;
+    border-right: #adf 1px solid;
+}
+
+@keyframes typing{
+    0% {width: 0;}
+}
+@keyframes blink{
+    50% {border-right-color: transparent;}
+}
+
+
+#firstView h1 {
+    display: block;
+    position: relative;
 }
 
 
@@ -263,6 +289,93 @@ main {
     20%, 24%, 55% {        
         text-shadow: none;
     }    
+}
+
+#firstView h1 span {
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#firstView h1 span:nth-child(1) {
+    animation: flicker 1.5s infinite alternate, bottomToTop 1s;
+}
+#firstView h1 span:nth-child(2) {
+    animation: flicker 1.5s infinite alternate, rightToLeft 1s;
+}
+#firstView h1 span:nth-child(3) {
+    animation: flicker 1.5s infinite alternate, leftToRight 1s;
+}
+#firstView h1 span:nth-child(6) {
+    animation: flicker 1.5s infinite alternate, rightToLeft 1s;
+}
+#firstView h1 span:nth-child(7) {
+    animation: flicker 1.5s infinite alternate, bottomToTop 1s;
+}
+#firstView h1 span:nth-child(8) {
+    animation: flicker 1.5s infinite alternate, leftToRight 1s;
+}
+
+@keyframes leftToRight {
+    0% {
+        transform: translateX(-80px);
+    }
+    20% {
+        transform: translateX(-75px);
+    }
+    40% {
+        transform: translateX(-60px);
+    }
+    60% {
+        transform: translateX(-40px);
+    }
+    80% {
+        transform: translateX(-20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes rightToLeft {
+    0% {
+        transform: translateX(80px);
+    }
+    20% {
+        transform: translateX(75px);
+    }
+    40% {
+        transform: translateX(60px);
+    }
+    60% {
+        transform: translateX(40px);
+    }
+    80% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes bottomToTop {
+    0% {
+        transform: translateY(80px);
+    }
+    20% {
+        transform: translateY(75px);
+    }
+    40% {
+        transform: translateY(60px);
+    }
+    60% {
+        transform: translateY(40px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 
