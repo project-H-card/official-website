@@ -87,7 +87,7 @@ async function init() {
     scene.add(gridHelper);
 
 
-    const imageNames = ["源義経.png", "高杉晋作.png", "坂本龍馬.png", "清少納言.png", "平将門.png"];
+    const imageNames = ["源義経.webp", "高杉晋作.webp", "坂本龍馬.webp", "清少納言.webp", "平将門.webp"];
     const cardNum = imageNames.length;
 
     for(let i = 0; i < cardNum; i++){
