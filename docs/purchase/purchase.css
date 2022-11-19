@@ -11,3 +11,11 @@ main {
 }
 
 
+@media screen and (max-width: 700px){
+    #purchaseMainFirst h2 {
+        font-size: 64px;
+    }
+    #purchaseMainFirst h1 {
+        font-size: 48px;
+    }
+}
