@@ -55,6 +55,7 @@ body {
 #ourTeam p {
     display: block;
     margin: 40px 0;
+    font-size: 24px;
 }
 
 
@@ -68,6 +69,15 @@ body {
     font-weight: bold;
     line-height: 40px;
     font-size: 24px;
+}
+
+#about_note p {
+    text-align: center;
+}
+
+.note-iframes {
+    width: 700px;
+    text-align: center;
 }
 
 #visionTexts2 {
