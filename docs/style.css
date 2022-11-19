@@ -987,6 +987,9 @@ footer small {
 
 /* PC版のみの設定 */
 @media screen and (min-width:699px) {
+    #vision > div:first-child {
+        margin-top: 50px;
+    }
     .whyHistoryLeft {
         display: block; 
         margin-left: 50px;
