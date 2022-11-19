@@ -6,15 +6,18 @@
     --black: #111111;
     --header-height: 64px;
     --footer-height: 64px;
+    --select-color: #68e;
 }
 
 
 #cardMainFirst {
     text-align: center;
+    margin: 80px;
+
 }
 
-#cardMainFirst h2 {
-    font-size: 128px;
+#cardMainFirst h1 {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 main {
@@ -22,90 +25,103 @@ main {
     /* background-color: var(--main-color); */
 }
 
-/* #cardCanvas {
+#selectShow {
+    margin: 20px;
+}
+
+#selectShow ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+#cardSection {
     margin: auto;
+}
+
+#selectShow ul li {
     display: block;
-}
-
-.rules {
-    background: var(--white);
-}
-
-.ruleFirstBlock {
+    width: 30%;
+    max-width: 200px;
     text-align: center;
-    margin: 30px 0;
-    padding: 30px;
-    padding-bottom: 50px;
-    background: var(--main-color);
-}
-
-.ruleSteps {
+    border-radius: 20px;
+    height: 40px;
+    line-height: 40px;
     background: var(--white);
+    color: var(--black);
+    cursor: pointer;
+    border: 3px solid var(--select-color);
+}
+
+#selectShow ul li.is_active {
+    color: var(--white);
+    background: var(--select-color);
+}
+
+.cardsShow {
+    display: none;
+    margin: 50px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cardsShow li {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin: 5px;
+    transition: all 0.3s;
     overflow: hidden;
-}
-
-.ruleStep {
-    width: 60%;
-    background: var(--main-color);
-    padding: 30px;
-    margin: 5px 0;
-}
-
-.ruleStep h2 {
-    display: block;
-    background: var(--dark);
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 30px;
     position: relative;
-    height: 70px;
-    line-height: 70px;
 }
 
-.ruleStep p {
+.cardsShow li:hover {
+    transform: scale(1.5);
+    z-index: 10;
+}
+
+.cardsShow li img {
     display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
 }
 
-.rightWord {
-    margin-right: 0;
-    margin-left: auto;
+.is_show {
+    display: flex;
 }
 
-.leftWord h2 {
-    transform: translateX(-30px);
-    padding-left: 20px;
-}
-
-.leftWord h2::before {
-    content: "";
+/*キラッと光る*/
+.cardsShow li::after {
+    content: '';
+    /*絶対配置でキラッと光るの位置を決める*/
     position: absolute;
-    border-style: solid;
-    border-color: var(--main-color) var(--main-color) transparent transparent;
-    border-width: 0px 80px 100px 0;  
-    right: 0;
+    top: 0;
+    left: -75%;
+    /*キラッと光る形状*/
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    transform: skewX(-25deg);
+    animation: shine 3.0s infinite;
 }
 
-.rightWord h2 {
-    margin-right: 0;
-    margin-left: auto;
-    transform: translateX(30px);
-    text-align: end;
-    padding-right: 20px;
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
 }
 
-.rightWord h2::before {
-    content: "";
-    position: absolute;
-    border-style: solid;
-    border-color: var(--main-color) transparent transparent var(--main-color);
-    border-width: 100px 80px 100px 0px; 
-    left: 0;
-} */
 
 
 
 @media screen and (max-width:700px) {
     #cardMainFirst h2 {
         font-size: 64px;
+    }
+
+    .cardsShow li {
+        max-width: calc(50vw - 60px);
     }
 }
