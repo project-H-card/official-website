@@ -9,6 +9,34 @@
     --select-color: #68e;
 }
 
+#cardExpansion {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+    position: fixed;
+    justify-content: center;
+    opacity: 0;
+    transition: all 1s;
+    pointer-events: none;
+}
+
+#cardExpansion.is_visible {
+    opacity: 1;
+    pointer-events: inherit;
+}
+
+#cardExpansion * {
+    pointer-events: none;
+    max-width: 90%;
+    max-height: 90%;
+    display: block;
+    margin: auto;
+}
+
 
 #cardMainFirst {
     text-align: center;
