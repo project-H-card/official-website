@@ -147,6 +147,7 @@ main {
     height: auto;
     overflow: hidden;
     position: relative;
+    cursor: pointer;
 }
 
 .is_show {

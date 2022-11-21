@@ -10,11 +10,24 @@ selectLis.forEach(li => li.addEventListener("click", (e) => {
     document.getElementById(e.target.id + "Cards").classList.add("is_show");
 }))
 
-const cardImages = [...document.querySelectorAll(".cardsShow img")];
-cardImages.forEach(elem => elem.addEventListener("click", (e) => {
+const imageClicked = (e) => {
     cardExpansion.classList.add("is_visible");
     console.log(e.target);
     cardExpansion.insertAdjacentElement("beforeend", e.target.cloneNode());
+}
+
+const cardImages = [...document.querySelectorAll(".cardsShow img")];
+
+// cardImages.forEach(elem => elem.addEventListener("click", (e) => {
+//     imageClicked(e);
+// }))
+
+// cardImages.forEach(elem => elem.addEventListener("touchend", (e) => {
+//     imageClicked(e);
+// }))
+
+cardImages.forEach(elem => elem.addEventListener("mouseup", (e) => {
+    imageClicked(e);
 }))
 
 cardExpansion.addEventListener("click", (e) => {
