@@ -183,6 +183,16 @@ main {
         font-size: 64px;
     }
 
+    #selectShow ul {
+        flex-wrap: wrap;
+    }
+
+    #selectShow ul li {
+        max-width: 350px;
+        width: 40%;
+        margin: 10px 0;
+    }
+
     .cardsShow li {
         max-width: calc(50vw - 60px);
     }
