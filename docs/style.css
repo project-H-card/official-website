@@ -630,6 +630,12 @@ main {
     font-size: 8px;
 }
 
+
+#story6 {
+    width: 90%;
+}
+
+
 #whyHistory::before {
     content: "Why History?";
 }
