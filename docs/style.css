@@ -420,6 +420,33 @@ main {
 }
 
 
+#goToPurchaseBlock {
+    display: block;
+    position: fixed;
+    left: 20px;
+    right: auto;
+    bottom: 30px;
+    z-index: 100;
+    top: auto;
+}
+
+#goToPurchase {
+    display: block;
+    position: fixed;
+    left: 20px;
+    right: auto;
+    bottom: 30px;
+    top: auto;
+}
+
+
+
+
+
+
+
+
+
 #mainFirst {
     position: relative;
     text-align: center;
