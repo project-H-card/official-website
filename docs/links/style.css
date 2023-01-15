@@ -6,7 +6,7 @@
 }
 main{
     background-image: url(./images/links_background.png);
-    min-height: 2000px;
+    /* min-height: 2000px; */
     background-attachment: fixed;
     background-position: center center;
 }
@@ -39,7 +39,7 @@ main{
 }
 .top_image{
     display: block;
-    width: 40vw;
+    width: 60vw;
     margin: 0 auto;
     position: relative;
     background: white;
@@ -83,16 +83,22 @@ main{
     display: flex;
     justify-content: space-around;
     text-align: center;
-    padding: 50px 30%;
+    flex-direction: column;
+    padding: 0;
+    margin-left: 85%;
+    position: fixed;
+    right: 5%;
+    top: 20%;
+
 
 }
 .sns{
     background: linear-gradient(to right bottom, rgba(14, 203, 250, 0.897),rgba(57, 120, 202, 1));
-    width: 31%;
-    height: 200px;
+    width: 100%;
     border-radius: 30px;
     box-shadow: rgba(63, 201, 243, 0.7) 0px 3px 8px;
     transition: all 0.2s;
+    margin-bottom: 20px;
 }
 .backgroundsquare{
     width: 31%;
@@ -127,21 +133,22 @@ main{
 
 
 .rule-video{
-    width: 672px;
-    height: 377.81px;
-    margin: 10px auto;
+    width: 60vh;
+    aspect-ratio: 16/9;
+    margin: 30px auto;
     text-align: center;
-    width: 40vw;
+    width: 60vw;
     border-radius: 30px;
     transition: all 0.2s;
     box-shadow: rgba(63, 201, 243, 0.7) 0px 3px 8px;
-    background-color: white;
+    /* background-color: white; */
 
 }
 iframe{
     width: 100%;
     height: 100%;
     border-radius: 30px;
+    display: block;
 
 
 }
@@ -150,19 +157,39 @@ iframe{
     opacity: 0.9;
 }
 
-
-/* .block{
-    width: 30%;
-    height: 100px;
-    background: red;
-    border: 1px solid black;
-} */
-
-
-
+.logo{
+    text-align: center;
+    display: block;
+    padding: 40px 0;
+}
+.logo img{
+    
+}
 
 
 
-@media screen and (max-width:500px) {
 
+
+@media screen and (max-width:600px) {
+    .top_image{
+        width: 80vw;
+        
+    }
+    .textbox{
+        padding: 5px 15px;
+        font-size: 12px;
+    }
+    .sns-area{
+        position: static;
+        flex-direction: row;
+        margin: 0;
+        padding: 25px 10%;
+    }
+    .sns{
+        width: 31%;
+    }
+    .rule-video{
+        width: 80vw;
+        margin: 0 auto;
+    }
 }
