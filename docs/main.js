@@ -33,17 +33,23 @@ QTexts.forEach(QText => {
 
 
 // カードが回るやつ
-window.addEventListener('DOMContentLoaded', init);
+let imageNamesList = {
+    heianKamakura: ["平安_08.webp", "平安_10.webp", "平安_11.webp", "平安_14.webp", "平安_17.webp"],
+    bakumatsu: ["幕末_02.webp", "幕末_04.webp", "幕末_13.webp", "幕末_15.webp", "幕末_17.webp"],
+    gendai: ["現代_01.webp", "現代_02.webp", "現代_03.webp", "現代_04.webp", "現代_05.webp"],
+};
+window.addEventListener('DOMContentLoaded', () => init(imageNamesList["heianKamakura"]));
 const canvas = document.querySelector('#cardCanvas');
 
 
+
 // 10枚のカードの画像が円形に回る
-async function init() {
+async function init(imageNames) {
 
     // サイズを指定
     const displaySize = window.innerWidth;
     let width = 900;
-    if(displaySize < 1000) width = displaySize - 100;
+    if(displaySize < 1000) width = displaySize - 50;
     const height = 540;
 
     let cameraDistance = 250;
@@ -87,11 +93,10 @@ async function init() {
     scene.add(gridHelper);
 
 
-    const imageNames = ["平安_4.webp", "平安_10.webp", "平安_11.webp", "幕末_3.webp"];
     const cardNum = imageNames.length;
 
     for(let i = 0; i < cardNum; i++){
-        const texture = await new THREE.TextureLoader().load(`images/cards/${imageNames[i]}`)
+        const texture = await new THREE.TextureLoader().load(`images/cards_new/${imageNames[i]}`)
         // 縦横比を保って適当にリサイズ
         const h = 100;
         const w = Math.round(h * 743 / 1038);
@@ -128,3 +133,15 @@ async function init() {
     }
 
 }
+
+
+const selectShowLis = [...document.querySelectorAll("#selectShow ul li")];
+
+selectShowLis.forEach(li => li.addEventListener("click", (e) => {
+    selectShowLis.forEach(allLi => allLi.classList.remove("is_active"));
+    e.target.classList.add("is_active");
+
+    init(imageNamesList[e.target.id]);
+}))
+
+

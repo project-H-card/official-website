@@ -34,6 +34,47 @@ main {
     max-width: 100%;
 }
 
+.goToLinksButton {
+    position: relative;
+    height: 60px;
+    display: block;
+    width: fit-content;
+    padding: 0 50px;
+    background: linear-gradient(to right, rgb(168, 5, 168), rgb(206, 141, 152));
+    border-radius: 30px;
+    line-height: 60px;
+    margin: auto;
+    top: 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    /* border: var(--white) 1px solid; */
+    box-shadow: rgb(200 200 200 / 40%) 5px 5px 5px;
+    overflow: hidden;
+}
+
+.goToLinksButton span {
+    position: relative;
+}
+
+.goToLinksButton::before {
+    background: linear-gradient(to left, rgb(168, 5, 168), rgb(206, 141, 152));
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s linear;
+    width: 100%;
+    border-radius: 30px;
+}
+
+.goToLinksButton:hover::before {
+    opacity: 0;
+}
+
+
+
 /* .sns {
     margin-top: 30px;
 }
