@@ -5,6 +5,21 @@ hamburgerBtn.addEventListener("click", (e) => {
 });
 
 
+const saleStartTime = new Date("2023-02-21 09:00:00");
+const baseURL = "https://historycard.base.shop/items/69914853";
+
+if(new Date().getTime() > saleStartTime.getTime()) {
+    document.querySelectorAll(".purchaseButton").forEach(elem => {
+        elem.href = baseURL;
+        elem.target = "_blank";
+        elem.rel="noopener noreferrer";
+    });
+    document.querySelectorAll(".purchaseButton span").forEach(elem => {
+        elem.innerText = "購入はこちら！";
+    });
+}
+
+
 
 let popUpTargets = document.querySelectorAll('.scrollPopUp,.scrollLeftPop,.scrollRightPop');
 
