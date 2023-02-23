@@ -1,8 +1,14 @@
 console.log("loaded!");
 const hamburgerBtn = document.getElementById("hamburgerBtn");
-hamburgerBtn.addEventListener("click", (e) => {
-    document.querySelector("header nav ul").classList.toggle("active");
-});
+const headerNavUlLiAs = document.querySelectorAll("header nav ul li a");
+const headerNavUl = document.querySelector("header nav ul");
+
+const toggleHamburgerMenu = () => {
+    headerNavUl.classList.toggle("active");
+}
+
+hamburgerBtn.addEventListener("click", toggleHamburgerMenu);
+headerNavUlLiAs.forEach(elem => elem.addEventListener("click", toggleHamburgerMenu));
 
 
 const saleStartTime = new Date("2023-02-21 09:00:00");

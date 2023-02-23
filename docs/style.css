@@ -789,6 +789,21 @@ main {
     content: "Rules";
 }
 
+.ruleVideoTop {
+    display: block;
+    margin: 30px auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.goToCanvaFull {
+    color: white;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
 
 #FAQs::before {
     content: "Q&A";
