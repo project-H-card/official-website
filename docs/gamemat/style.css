@@ -1,9 +1,18 @@
 main{
-    margin-top: 200px;
+    margin-top: 50px;
+    min-height: 500px;
 }
+
+
 .gamematText{
     color: white;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+
+}
+.gamematText h1{
+    font-size: 56px;
 }
 
 .tab-wrap {
