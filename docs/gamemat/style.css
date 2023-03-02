@@ -1,6 +1,6 @@
 main{
     margin-top: 50px;
-    min-height: 500px;
+    min-height: 900px;
 }
 
 
@@ -14,21 +14,24 @@ main{
 .gamematText h1{
     font-size: 56px;
 }
+.caution{
+    font-size: small;
+}
 
 .tab-wrap {
     display: flex;
     flex-wrap: wrap;
     margin:20px 0;
-  }
-  .tab-wrap:after {
+}
+.tab-wrap:after {
     content: '';
     width: 100%;
     height: 3px;
     background: white;
     display: block;
     order: -1;
-  }
-  .tab-label {
+}
+.tab-label {
     color: white;
     background: black;
     font-weight: bold;
@@ -42,31 +45,81 @@ main{
     cursor: pointer;
     border-radius: 5px 5px 0 0;
     flex: 1;
-  }
+}
   .tab-label:not(:last-of-type) {
     margin-right: 5px;
-  }
-  .tab-content {
+}
+.tab-content {
     background: white;
+    text-align: center;
     width: 100%;
     height: 0;
     overflow: hidden;
     opacity: 0;
-  }
+}
+.tab-content img{
+    margin-top: 30px;
+}
+.tab-content p{
+    padding-top: 30px;
+    font-size: small;
+}
+  
+.gamematDownloadBottun{
+    margin: 30px auto;
+    position: relative;
+    height: 60px;
+    display: block;
+    width: fit-content;
+    padding: 0 50px;
+    background: linear-gradient(to right, rgb(168, 5, 168), rgb(206, 141, 152));
+    border-radius: 30px;
+    line-height: 60px;
+    top: 30px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 16px;
+    /* border: var(--white) 1px solid; */
+    box-shadow: rgba(129, 7, 93, 0.4) 5px 5px 5px;
+    overflow: hidden;
+}
+.gamematDownloadBottun a{
+    text-decoration: none;
+    color: white;
+}
+
+.gamematDownloadBottun span{
+    position: relative;
+}
+
+.gamematDownloadBottun::before{
+    background: linear-gradient(to left, rgb(168, 5, 168), rgb(206, 141, 152));
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.5s linear;
+    width: 100%;
+    border-radius: 30px;
+}
+
+
+
   /* アクティブなタブ */
-  .tab-switch:checked+.tab-label {
+.tab-switch:checked+.tab-label {
     color: black;
     background: white;
-  }
-  .tab-switch:checked+.tab-label+.tab-content {
+}
+.tab-switch:checked+.tab-label+.tab-content {
     height: auto;
     overflow: auto;
     padding: 15px;
     opacity: 1;
     transition: .5s opacity;
     box-shadow: 0 0 3px rgba(0,0,0,.2);
-  }
+}
   /* ラジオボタン非表示 */
-  .tab-switch {
+.tab-switch {
     display: none;
-  }
+}
