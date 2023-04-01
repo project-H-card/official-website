@@ -801,7 +801,12 @@ main {
     color: white;
     text-align: center;
     display: block;
-    margin: auto;
+    margin: auto auto 70px;
+}
+
+.manualDL h3{
+    text-align: center;
+    font-size: 20px;
 }
 
 .manualDownloadButton{
@@ -809,11 +814,11 @@ main {
     height: 60px;
     display: block;
     width: fit-content;
-    padding: 0 50px;
+    padding: 0 80px;
     background: linear-gradient(to right, rgb(168, 5, 168), rgb(206, 141, 152));
     border-radius: 30px;
     line-height: 60px;
-    margin: auto;
+    margin: 0 auto 30px auto;
     top: 30px;
     text-decoration: none;
     color: var(--white);
@@ -821,6 +826,7 @@ main {
     /* border: var(--white) 1px solid; */
     box-shadow: rgb(200 200 200 / 40%) 5px 5px 5px;
     overflow: hidden;
+
 }
 .manualDownloadButton a{
     text-decoration: none;
@@ -847,8 +853,9 @@ main {
     opacity: 0;
 }
 
+
 .manualNavigation{
-    padding-top: 70px;
+    padding-top: 40px;
     text-align: center;
 }
 
