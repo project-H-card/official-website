@@ -1147,3 +1147,12 @@ footer small {
         margin-left: 50px;
     }
 }
+
+@media screen and (min-width:699px) {
+    .purchase a {
+        padding: 3px 130px;
+    }
+    .purchase span{
+        font-size: 20px;
+    }
+}
