@@ -14,11 +14,11 @@ headerNavUlLiAs.forEach(elem => elem.addEventListener("click", toggleHamburgerMe
 const saleStartTime = new Date("2023-02-21 09:00:00");
 const baseURL = "https://historycard.base.shop/items/69914853";
 
-if(new Date().getTime() > saleStartTime.getTime()) {
+if (new Date().getTime() > saleStartTime.getTime()) {
     document.querySelectorAll(".purchaseButton").forEach(elem => {
         elem.href = baseURL;
         elem.target = "_blank";
-        elem.rel="noopener noreferrer";
+        elem.rel = "noopener noreferrer";
     });
     document.querySelectorAll(".purchaseButton span").forEach(elem => {
         elem.innerText = "購入はこちら！";
@@ -52,6 +52,12 @@ QTexts.forEach(QText => {
 
 
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
 
 // カードが回るやつ
 let imageNamesList = {
@@ -59,23 +65,31 @@ let imageNamesList = {
     bakumatsu: ["幕末_02.webp", "幕末_04.webp", "幕末_13.webp", "幕末_15.webp", "幕末_17.webp"],
     gendai: ["現代_01.webp", "現代_02.webp", "現代_03.webp", "現代_04.webp", "現代_05.webp"],
 };
-window.addEventListener('DOMContentLoaded', () => init(imageNamesList["heianKamakura"]));
+
+let shouldAnimate = true;
 const canvas = document.querySelector('#cardCanvas');
+
+
+window.addEventListener('DOMContentLoaded', () => init(imageNamesList["heianKamakura"]));
+
 
 
 
 // 10枚のカードの画像が円形に回る
 async function init(imageNames) {
+    // 既存のアニメーションを停止
+    shouldAnimate = false;
+    let wait300ms = sleep(300);
 
     // サイズを指定
     const displaySize = window.innerWidth;
     let width = 900;
-    if(displaySize < 1000) width = displaySize - 50;
+    if (displaySize < 1000) width = displaySize - 50;
     const height = 540;
 
     let cameraDistance = 250;
 
-    if(displaySize < 700) {
+    if (displaySize < 700) {
         cameraDistance = 500;
         width = displaySize;
         canvas.style.transform = "translateX(-50px)"
@@ -84,7 +98,7 @@ async function init(imageNames) {
 
     // レンダラーを作成
     const renderer = new THREE.WebGLRenderer({
-    canvas
+        canvas
     });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(width, height);
@@ -100,24 +114,36 @@ async function init(imageNames) {
     // const light = new THREE.AmbientLight( 0xffffff );
     const light = new THREE.DirectionalLight(0xcccccc, 1);
     light.position.set(0, 10, 5000);
-    scene.add( light );
+    scene.add(light);
 
-    // グループを作る
-    const group = new THREE.Group();
-    // 3D空間にグループを追加する
+
+    // 背景
+    const backTexture = await new THREE.TextureLoader().load(`images/three_back_stop.png`);
+    // const backTexture = await new THREE.TextureLoader().load(`images/three_back_move.gif`);
+    const back = new THREE.Mesh(
+        new THREE.PlaneGeometry(1000, 1000, 1, 1),
+        new THREE.MeshPhongMaterial({ map: backTexture })
+    );
+    back.position.set(0, 0, -500);
+    scene.add(back);
+
+
+
+    group = new THREE.Group();
     scene.add(group);
 
-    const size = 10;
-    const step = 1;
 
-    const gridHelper = new THREE.GridHelper(size, step, "#f5f5f5");
-    scene.add(gridHelper);
+    // const size = 10;
+    // const step = 1;
+
+    // const gridHelper = new THREE.GridHelper(size, step, "#f5f5f5");
+    // scene.add(gridHelper);
 
 
     const cardNum = imageNames.length;
 
-    for(let i = 0; i < cardNum; i++){
-        const texture = await new THREE.TextureLoader().load(`images/cards_new/${imageNames[i]}`)
+    for (let i = 0; i < cardNum; i++) {
+        const texture = await new THREE.TextureLoader().load(`images/cards_new/${imageNames[i]}`);
         // 縦横比を保って適当にリサイズ
         const h = 100;
         const w = Math.round(h * 743 / 1038);
@@ -125,8 +151,8 @@ async function init(imageNames) {
 
         // 平面
         const geometry = new THREE.PlaneGeometry(1, 1);
-        const material = new THREE.MeshPhongMaterial( { map:texture } );
-        const plane = new THREE.Mesh( geometry, material );
+        const material = new THREE.MeshPhongMaterial({ map: texture });
+        const plane = new THREE.Mesh(geometry, material);
         plane.scale.set(w, h, 1);
 
         // 配置座標を計算
@@ -140,11 +166,16 @@ async function init(imageNames) {
         group.add(plane);
     }
 
-
+    // 新しいアニメーションを開始
+    await wait300ms;
+    shouldAnimate = true;
     tick();
 
     // 毎フレーム時に実行されるループイベントです
     function tick() {
+        if (!shouldAnimate) {
+            return;
+        }
         group.rotation.y += 0.005;
         group.children.forEach(elem => elem.rotation.y -= 0.005);
 
