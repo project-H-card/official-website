@@ -63,7 +63,7 @@ function sleep(ms) {
 let imageNamesList = {
     heianKamakura: ["平安_08.webp", "平安_10.webp", "平安_11.webp", "平安_14.webp", "平安_17.webp"],
     bakumatsu: ["幕末_02.webp", "幕末_04.webp", "幕末_13.webp", "幕末_15.webp", "幕末_17.webp"],
-    sengoku: ["戦国_01.webp", "戦国_02.webp", "戦国_03.webp", "戦国_04.webp", "戦国_05.webp"],
+    sengoku: ["戦国_11.webp", "戦国_13.webp", "戦国_15.webp", "戦国_16.webp", "戦国_17.webp"],
     gendai: ["現代_01.webp", "現代_02.webp", "現代_03.webp", "現代_04.webp", "現代_05.webp"],
 };
 
