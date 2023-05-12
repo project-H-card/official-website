@@ -35,7 +35,7 @@ if (new Date().getTime() > saleStartTime.getTime()) {
         elem.rel = "noopener noreferrer";
     });
     document.querySelectorAll(".purchaseButton span").forEach(elem => {
-        elem.innerText = "購入はこちら";
+        elem.innerText = "購入はこちら！";
     });
 }
 
