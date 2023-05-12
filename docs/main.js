@@ -27,6 +27,7 @@ headerNavUlLiAs.forEach(elem => elem.addEventListener("click", toggleHamburgerMe
 
 const saleStartTime = new Date("2023-05-13 11:00:00");
 const baseURL = "https://historycard.base.shop/";
+const reserveURL = "https://forms.gle/x6Hp48uQYa1Nmn7f7";
 
 if (new Date().getTime() > saleStartTime.getTime()) {
     document.querySelectorAll(".purchaseButton").forEach(elem => {
@@ -36,6 +37,15 @@ if (new Date().getTime() > saleStartTime.getTime()) {
     });
     document.querySelectorAll(".purchaseButton span").forEach(elem => {
         elem.innerText = "購入はこちら！";
+    });
+} else {
+    document.querySelectorAll(".purchaseButton").forEach(elem => {
+        elem.href = reserveURL;
+        elem.target = "_blank";
+        elem.rel = "noopener noreferrer";
+    });
+    document.querySelectorAll(".purchaseButton span").forEach(elem => {
+        elem.innerText = "購入予約はこちら！";
     });
 }
 
