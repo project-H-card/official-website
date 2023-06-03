@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7GDGBX5WY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-J7GDGBX5WY');
+    </script> -->
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NJMLW9K');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hi!story【ハイスト】の事前登録ページです。販売開始までもうしばらくお待ちください。">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>テストプレイ | Hi!story【ハイスト】歴史カードゲーム</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./play.css">
+
+
+    <meta property="og:site_name" content="Hi!story【ハイスト】歴史カードゲーム">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:title" content="事前登録ページへ | Hi!story【ハイスト】歴史カードゲーム">
+    <meta property="og:description" content="Hi!storyの事前登録ページです。販売開始までもうしばらくお待ちください。">
+    <meta property="og:url" content="https://highsto.net/purchase">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://highsto.net/images/History_top_header_3.webp">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJMLW9K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <nav>
+            <a href="../" id="logoBlock">
+                <img src="../images/history_logo_circle_2_transparent.webp" alt="ロゴ" id="headerLogo">
+            </a>
+            <ul>
+                <li><a href="../about/"><span>私たちについて</span></a></li>
+                <li><a href="../cards/"><span>カード名鑑</span></a></li>
+                <li><a href="../#rules"><span>ルール</span></a></li>
+                <li><a href="../contact/"><span>お問い合わせ</span></a></li>
+            </ul>
+            <div id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="selectArea">
+            <h1>デッキを選択</h1>
+            <div id="selectShow">
+                <ul>
+                    <li id="heianKamakura" class="is_active">平安・鎌倉</li>
+                    <li id="sengoku">戦国・室町</li>
+                    <li id="bakumatsu">幕末</li>
+                </ul>
+            </div>
+            <input type="button" value="START" id="startBtn">
+        </section>
+
+        <section id="playArea" style="display: none;">
+            <div id="gameZone">
+                <div id="field">
+                    <div class="fieldCardArea cardArea"></div>
+                    <div class="fieldCardArea cardArea"></div>
+                    <div class="fieldCardArea cardArea"></div>
+                    <div class="fieldCardArea cardArea"></div>
+                    <div class="fieldCardArea cardArea"></div>
+                </div>
+                <div id="deckTrash">
+                    <div id="deck" class="cardArea">
+                        <div id="deckCards">
+
+                        </div>
+                        <div id="deckTextDiv" class="cardTextDiv"><span>山札</span></div>
+                    </div>
+                    <div id="trash" class="cardArea">
+                        <div id="trashCards">
+
+                        </div>
+                        <div id="trashTextDiv" class="cardTextDiv"><span>墓地</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerBlock">
+            <nav>
+                <ul>
+                    <li><a href="../about/"><span>私たちについて</span></a></li>
+                    <li><a href="../cards/"><span>カード名鑑</span></a></li>
+                    <li><a href="../#rules"><span>ルール</span></a></li>
+                    <li><a href="../contact/"><span>お問い合わせ</span></a></li>
+                </ul>
+            </nav>
+            <div class="snsIcons">
+                <a class="footerTwitter" href="https://twitter.com/projecthcard" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/twitter_logo_blue.svg" alt="Twitter">
+                </a>
+                <a class="footerNote" href="https://note.com/history_card" target="_blank" rel="noopener noreferrer">
+                    <img src="../images/note_logo_symbol_white.webp" alt="Note">
+                </a>
+            </div>
+        </div>
+        <small>Copyright © 2022 Hi!story</small>
+    </footer>
+    <script src="./play.js"></script>
+    <script src="../main.js"></script>
+</body>
+</html>
