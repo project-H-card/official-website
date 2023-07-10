@@ -43,7 +43,7 @@ body {
 }
 
 #ourTeam::before {
-    content: "OUR TEAM";
+    content: "COMPANY";
 }
 
 #ourTeam h2 {
@@ -57,6 +57,21 @@ body {
     margin: 80px 0 0 0;
     font-size: 14px;
     line-height: 30px;
+}
+
+#companyInfoTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#companyInfoTable th {
+    max-width: 200px;
+    width: 25%;
+    min-width: 70px;
+}
+
+#companyInfoTable th, #companyInfoTable td {
+    border-bottom: 1px solid #bbb;
 }
 
 
